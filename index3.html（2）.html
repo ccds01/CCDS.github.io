@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>cd的小世界</title>
+<style>
+    .parent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .parent>.child{
+        /*width:300px;*/
+        flex: 0 1 300px;
+        height: 100px;
+        margin: 10px;
+        border: 1px solid royalblue;
+    }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://ccds01.github.io/CCDS.github.io/first.mp4" type="video/mp4">
+  您的浏览器不支持 HTML5 video 视频。
+</video>
+
+<div class="content" class="parent">
+    <div class="child">
+        <h1>新年的信</h1>
+  <p>单纯善良积极乐观美丽大方且上进的丁小潼:<br>
+    新！年！快！乐！给你拜年啦也不知道有没有个红包哇。<br>
+    嘿嘿，又是一年了，时间还真快啊，不经意间都长大了，也成熟了一点，我呢帅了亿点，你呢也美了亿点啦，哈哈。
+    还记得今年元旦那天吗，我大胆的表白了，其实那时候我也很害怕，怕你不同意，也怕你同意，但是有情人终成眷属，
+    说不定，从我们见面的第一眼就注定了呢是不是，哈哈，总之，亲爱的小丁同学，我发现我真的好好好好好好好好喜欢你，
+    或许像“爱”那么高端的词我们还不到年龄，但你却给了我最真挚的温暖，最真挚的陪伴，最真挚的快乐，和最真挚的幸福，
+    我真的很享受和你在一起的每一秒每一刻，这也许就是爱情了吧，回想我们一路走来，从第一次相遇，到第一次分到一个小组，
+    再到相熟，相交，相恋，直到今天的相思，这一切都给我们带来了很多的幸福与美好，还记得之前第一次说话吗，那是做卫生的时候，
+    我真的很社恐，基本不和不认识的人说话，但可能是你开朗的性格和亲近声音吧，我还是和你说了几句话的，
+    之后也许是冥冥之中的注定吧，我在当组长后，恰巧又选中了你，之后的日子，我们越来越熟悉，随着时间的推移，我慢慢发现，
+    我好像对你产生了不同于其他女生的感觉，是你的清秀的脸庞，还是单纯善良的性格，我想不到，可能爱就是这么让人抓不住头脑吧，
+    后来，今年我许了个愿，希望我们可以一直互相陪伴在身边，一直在一起。<br>
+    我很爱你，更很感谢你，感谢你的陪伴与支持，感谢你的理解与宽容，更感谢你对我这么一个平平淡淡的人的爱，
+    曾经一个年少轻狂的少年总是不断的犯错，可总有个女孩一直陪伴着他，一直在他身边，不离不弃。
+    新的一年了，我们还在一起，若说我还有什么愿望，那么，请一直陪着我吧，亲爱的公主。<br>2024.2.10</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+  
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
